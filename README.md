@@ -27,3 +27,9 @@ MacOs
 - kubectl get pods -n istio-system
 - kubectl get svc -n istio-system
 ```
+
+# Terminal commands
+
+```
+- kubectl label namespace default istio-injection=enabled --overwrite (proxys in pods - ready 2/2)
+```
