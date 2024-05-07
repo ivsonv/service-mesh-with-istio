@@ -21,15 +21,28 @@ Creating cluster
 - https://istio.io/latest/docs/setup/getting-started/
 
 MacOs
-````
+```
 - curl -L https://istio.io/downloadIstio | sh -
 - istionctl install -y
 - kubectl get pods -n istio-system
 - kubectl get svc -n istio-system
 ```
 
+# Addons
+- https://github.com/istio/istio/tree/release-1.21/samples/addons
+
+NOTE: Wait a moment, as the first command may take a while to apply
+
+```
+- kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.21/samples/addons/prometheus.yaml
+- kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.21/samples/addons/kiali.yaml
+- kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.21/samples/addons/jaeger.yaml
+- kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.21/samples/addons/grafana.yaml
+```
+
 # Terminal commands
 
 ```
 - kubectl label namespace default istio-injection=enabled --overwrite (proxys in pods - ready 2/2)
+- istioctl dashboard kiali
 ```
