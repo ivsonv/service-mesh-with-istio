@@ -45,4 +45,5 @@ NOTE: Wait a moment, as the first command may take a while to apply
 ```
 - kubectl label namespace default istio-injection=enabled --overwrite (proxys in pods - ready 2/2)
 - istioctl dashboard kiali
+- while true; do curl http://localhost:8000; echo; sleep 0.5; done; (hack)
 ```
