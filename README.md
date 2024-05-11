@@ -47,3 +47,13 @@ NOTE: Wait a moment, as the first command may take a while to apply
 - istioctl dashboard kiali
 - while true; do curl http://localhost:8000; echo; sleep 0.5; done; (hack)
 ```
+
+- Consistent-hash
+ 
+ Maintaining the request based on the header, cookies, ip
+
+```
+- kubectl exec -it POD_NAME -- bash
+- curl --header "x-user: xxx"  http://nginx-service:8000
+```
+
